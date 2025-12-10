@@ -1,0 +1,32 @@
+
+#Job Begin
+
+
+============================================================
+[INFO] PROCESSING NON-DEVELOPER TRACKS
+============================================================
+
+============================================================
+[INFO] Processing non-developer_12points tracks from ./processed_tracks/non_developers_12points.xlsx
+============================================================
+Traceback (most recent call last):
+  File "/glade/u/home/smhenry/a/TC-seeds/2_process_ERA5.py", line 320, in <module>
+    process_tracks_by_year(NON_DEVELOPER_FILE, 'non-developer_12points', year_to_process=2022)
+  File "/glade/u/home/smhenry/a/TC-seeds/2_process_ERA5.py", line 273, in process_tracks_by_year
+    df = pd.read_excel(track_file)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/home/smhenry/miniconda3/envs/analysis/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 495, in read_excel
+    io = ExcelFile(
+         ^^^^^^^^^^
+  File "/glade/u/home/smhenry/miniconda3/envs/analysis/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1550, in __init__
+    ext = inspect_excel_format(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/home/smhenry/miniconda3/envs/analysis/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1419, in inspect_excel_format
+    with zipfile.ZipFile(stream) as zf:
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/home/smhenry/miniconda3/envs/analysis/lib/python3.12/zipfile/__init__.py", line 1341, in __init__
+    self._RealGetContents()
+  File "/glade/u/home/smhenry/miniconda3/envs/analysis/lib/python3.12/zipfile/__init__.py", line 1408, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+DONE
